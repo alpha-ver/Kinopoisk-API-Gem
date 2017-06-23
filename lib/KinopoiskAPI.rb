@@ -27,6 +27,7 @@ module KinopoiskAPI
         'User-Agent'          => 'Android client (4.4 / api19), ru.kinopoisk/4.0.2 (52)',
         'device'              => 'android'
       },
+      uuid: 'b7fa619af1f9c7622f85d2e212dfeb45', #ToDo generate uuid
       kinopoisk: {
           main: 'https://www.kinopoisk.ru',
           poster: {
@@ -59,34 +60,6 @@ module KinopoiskAPI
       navigator_filters:{
         method: 'navigatorFilters'
       },
-
-
-
-      get_top_100_popular: {
-        method: 'getKPTop',
-        type:   'kp_item_top_popular_films'
-      },
-
-      get_top_100_await: {
-        method: 'getKPTop',
-        type:   'kp_item_top_await'
-      },
-
-      get_top_100_people: {
-        method: 'getKPTop',
-        type:   'kp_item_top_popular_people'
-      },
-
-      get_top_250_best:{
-        method: 'getKPTop',
-        type:  'kp_item_top_best_film'
-      },
-
-      get_top_100_gross:{
-        method: 'getKPTop',
-        type:   'kp_item_most_box_office',
-      },
-
 
       get_reviews: {
           method: 'getKPReviews',
@@ -133,9 +106,24 @@ module KinopoiskAPI
           method: 'getDatesForSoonDVD'
       },
 
-      get_best_films: {
-          method: 'getBestFilms'
+      get_top: {
+        method: 'getKPTop',
+        page:   'page',
+        type:   'type',
+        types: {
+          popular_films:   'kp_item_top_popular_films',
+          best_films:      'kp_item_top_best_films',
+          await_films:     'kp_item_top_await',
+          popular_people:  'kp_item_top_popular_people',
+
+        }
       },
+
+      get_best_films_list: {
+          method: 'getBestFilmsList'
+      },
+
+
 
       search_global: {
           method: 'getKPGlobalSearch',

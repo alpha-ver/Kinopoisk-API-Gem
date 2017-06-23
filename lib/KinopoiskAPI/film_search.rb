@@ -14,28 +14,9 @@ module KinopoiskAPI
       @json['searchFilmsCountResult']
     end
 
-    def page_count
-      @page_count
-    end
-
-    def current_page
-      @current_page
-    end
-
     def view
       @json['searchFilms'].map do |film|
         film_hash(film)
-      end
-    end
-
-    def next_page
-      if @page < @page_count
-        @page += 1
-        gen_url
-        @json = json
-        true
-      else
-        false
       end
     end
 

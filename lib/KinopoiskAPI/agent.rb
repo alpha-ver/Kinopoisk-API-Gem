@@ -21,18 +21,45 @@ module KinopoiskAPI
     ####
     ####
 
-    private
+    #For paginate
+    def next_page
+      if @page < @page_count
+        @page += 1
+        gen_url
+        @json = json
+        true
+      else
+        false
+      end
+    end
 
-      def json(url=nil)
+    def page_count
+      @page_count
+    end
+
+    def current_page
+      @page
+    end
+
+
+
+
+    #private
+
+      def json(url=nil, bu=true)
         if url.nil?
           uri       = URI(@url)
         else
           uri       = URI(url)
         end
 
-        uuid      = Digest::MD5.hexdigest("--#{rand(10000)}--#{Time.now}--")
-        query     = URI.decode_www_form(String(uri.query)) << ["uuid", uuid]
+        if bu
+        query     = URI.decode_www_form(String(uri.query))
+        #uuid      = Digest::MD5.hexdigest("--#{rand(10000)}--#{Time.now}--")
+        uuid      = DOMAINS[:uuid] 
+        query     << ["uuid", uuid]
         uri.query = URI.encode_www_form(query)
+        end
 
         path = uri.to_s.gsub("#{DOMAINS[:api]}/","") + DOMAINS[:salt]
         key  = Digest::MD5.hexdigest(path)
@@ -175,7 +202,10 @@ module KinopoiskAPI
 
       def min_data(data, name)
         s = dn(data, name)
-        s.present? ? Time.parse(s).seconds_since_midnight.to_i / 60 : 0
+        begin
+          s.present? ? Time.parse(s).seconds_since_midnight.to_i / 60 : 0
+        rescue
+        end
       end
 
       def url_data(data, name, id, poster_name)
@@ -225,11 +255,6 @@ module KinopoiskAPI
         }
       end
 
-
-
-
-
-
       def dn(data, name)
         if data.nil?
           r = @json[name]
@@ -244,7 +269,6 @@ module KinopoiskAPI
         end
         r
       end
-
 
 
 

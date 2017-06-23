@@ -4,15 +4,21 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'KinopoiskAPI/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'KinopoiskAPI'
-  spec.version       = KinopoiskAPI::VERSION
-  spec.authors       = ['Alexey Vildyaev']
-  spec.email         = ['hav0k@me.com']
+  spec.name                 = 'KinopoiskAPI'
+  spec.version              = KinopoiskAPI::VERSION
+  spec.authors              = ['Alexey Vildyaev']
+  spec.email                = ['hav0k@me.com']
 
-  spec.summary       = %q{Gem for operation with Kinopoisk API}
-  spec.description   = %q{Gem is based on the mobile API}
-  spec.homepage      = 'https://github.com/alpha-ver/Kinopoisk-API-Gem'
-  spec.license       = 'MIT'
+  spec.summary              = %q{Gem for operation with Kinopoisk API}
+  spec.description          =
+
+  <<-EOF
+    Gem is based on the mobile API.
+  EOF
+
+  spec.homepage             = 'https://github.com/alpha-ver/Kinopoisk-API-Gem'
+  spec.license              = 'MIT'
+  spec.post_install_message = "Thanks for installing!"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   # spec.bindir        = "exe"

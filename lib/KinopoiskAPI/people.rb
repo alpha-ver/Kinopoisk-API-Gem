@@ -39,7 +39,7 @@ module KinopoiskAPI
           :profession_key     =>  str_data(String, film['professionKey'  ]),
           :name_ru            =>  str_data(String, film['nameRU'         ]),
           :name_en            =>  str_data(String, film['nameEN'         ]),
-          :year               => time_data(String, film['year'           ])
+          :year               =>  int_data(String, film['year'           ])
         }
       end
     end
