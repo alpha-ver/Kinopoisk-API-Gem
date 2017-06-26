@@ -27,7 +27,7 @@ module KinopoiskAPI
         'User-Agent'          => 'Android client (4.4 / api19), ru.kinopoisk/4.0.2 (52)',
         'device'              => 'android'
       },
-      uuid: 'b7fa619af1f9c7622f85d2e212dfeb45', #ToDo generate uuid
+      uuid: 'f65c4b1a44f5c7ee8dbd4522fcb687f9', #ToDo generate uuid
       kinopoisk: {
           main: 'https://www.kinopoisk.ru',
           poster: {
