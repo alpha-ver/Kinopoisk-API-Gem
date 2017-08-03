@@ -20,14 +20,8 @@ require 'KinopoiskAPI/version'
 
 module KinopoiskAPI
   DOMAINS = {
-      api: 'https://ext.kinopoisk.ru/ios/3.11.0',
-      salt: 'a17qbcw1du0aedm',
-      headers: {
-        'Android-Api-Version' => '19',
-        'User-Agent'          => 'Android client (4.4 / api19), ru.kinopoisk/4.0.2 (52)',
-        'device'              => 'android'
-      },
-      uuid: 'f65c4b1a44f5c7ee8dbd4522fcb687f9', #ToDo generate uuid
+      api: 'http://kp_api.alphav.ru',
+
       kinopoisk: {
           main: 'https://www.kinopoisk.ru',
           poster: {

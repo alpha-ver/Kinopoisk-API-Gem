@@ -53,26 +53,28 @@ module KinopoiskAPI
           uri       = URI(url)
         end
 
-        if bu
-        query     = URI.decode_www_form(String(uri.query))
-        #uuid      = Digest::MD5.hexdigest("--#{rand(10000)}--#{Time.now}--")
-        uuid      = DOMAINS[:uuid] 
-        query     << ["uuid", uuid]
-        uri.query = URI.encode_www_form(query)
-        end
+        #if bu
+        #  query     = URI.decode_www_form(String(uri.query))
+        #  #uuid      = Digest::MD5.hexdigest("--#{rand(10000)}--#{Time.now}--")
+        #  uuid      = DOMAINS[:uuid]
+        #  query     << ["uuid", uuid]
+        #  uri.query = URI.encode_www_form(query)
+        #end
 
-        path = uri.to_s.gsub("#{DOMAINS[:api]}/","") + DOMAINS[:salt]
-        key  = Digest::MD5.hexdigest(path)
+        #path = uri.to_s.gsub("#{DOMAINS[:api]}/","") + DOMAINS[:salt]
+        #key  = Digest::MD5.hexdigest(path)
 
-        query     = URI.decode_www_form(String(uri.query)) << ["key", key]
-        uri.query = URI.encode_www_form(query)
+        #query     = URI.decode_www_form(String(uri.query)) << ["key", key]
+        #uri.query = URI.encode_www_form(query)
 
         print "[GET] -> " + uri.to_s
         get_time = Time.now
 
         http              = Net::HTTP.new(uri.host, uri.port)
         http.read_timeout = 10
-        http.use_ssl      = true
+        if uri.scheme == "https"
+          http.use_ssl      = true
+        end
         response          = http.get(uri.request_uri, DOMAINS[:headers])
 
         print " <- [#{(Time.now-get_time).round 3}s]\n"
