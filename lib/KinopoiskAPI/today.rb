@@ -3,7 +3,7 @@ module KinopoiskAPI
     attr_accessor :url
 
     def initialize
-      @url = "#{DOMAINS[:api]}/#{METHODS[:get_today_films][:method]}"
+      @url = "#{DOMAINS[:api]}/#{METHODS[:get_today_films][:method]}?cityID=1"
       @json = json
     end
 
