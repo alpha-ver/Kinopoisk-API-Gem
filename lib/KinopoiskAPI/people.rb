@@ -51,7 +51,9 @@ module KinopoiskAPI
     private
 
       def filmography
-        @json['filmography'].flatten
+        if !@json['filmography'].nil?
+          @json['filmography'].flatten
+        end
       end
 
 

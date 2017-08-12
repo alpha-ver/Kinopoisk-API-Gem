@@ -66,29 +66,34 @@ module KinopoiskAPI
 
         #query     = URI.decode_www_form(String(uri.query)) << ["key", key]
         #uri.query = URI.encode_www_form(query)
+        begin
+          print "[GET] -> " + uri.to_s
+          get_time = Time.now
 
-        print "[GET] -> " + uri.to_s
-        get_time = Time.now
-
-        http              = Net::HTTP.new(uri.host, uri.port)
-        http.read_timeout = 10
-        if uri.scheme == "https"
-          http.use_ssl      = true
-        end
-        response          = http.get(uri.request_uri, DOMAINS[:headers])
-
-        print " <- [#{(Time.now-get_time).round 3}s]\n"
-
-        if KinopoiskAPI::valid_json?(response.body)
-          j = JSON.parse(response.body)
-          if j['resultCode'] == 0
-            j['data']
-          else
-            j
+          http              = Net::HTTP.new(uri.host, uri.port)
+          http.read_timeout = 10
+          if uri.scheme == "https"
+            http.use_ssl      = true
           end
-        else
-          {:resultCode => -1, :message=> "Error method require", :data => { :code => response.code, :body => response.body} }
+          response          = http.get(uri.request_uri, DOMAINS[:headers])
+
+          print " <- [#{(Time.now-get_time).round 3}s]\n"
+
+          if KinopoiskAPI::valid_json?(response.body)
+            j = JSON.parse(response.body)
+            if j['resultCode'] == 0
+              j['data']
+            else
+              j
+            end
+          else
+            {:resultCode => -1, :message=> "Error method require", :data => { :code => response.code, :body => response.body} }
+          end
+        rescue Exeption > e
+          print "[Err] -> " + uri.to_s
+          raise APIerror.new(0, "")
         end
+
       end
 
       def json2
