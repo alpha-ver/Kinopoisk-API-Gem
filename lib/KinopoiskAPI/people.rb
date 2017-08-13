@@ -29,19 +29,22 @@ module KinopoiskAPI
     end
 
     def films
-      filmography.map do |film|
-        {
-          :id                 =>  int_data(String, film['filmID'         ]),
-          :rating             =>  int_data(String, film['rating'         ], nil, Float),
-          :rating_vote_count  =>  int_data(String, film['ratingVoteCount']),
-          :description        =>  str_data(String, film['description'    ]),
-          :profession_text    =>  str_data(String, film['professionText ']),
-          :profession_key     =>  str_data(String, film['professionKey'  ]),
-          :name_ru            =>  str_data(String, film['nameRU'         ]),
-          :name_en            =>  str_data(String, film['nameEN'         ]),
-          :year               =>  int_data(String, film['year'           ])
-        }
-      end
+      if filmography.nil?
+        []
+      else
+        filmography.map do |film|
+          {
+            :id                 =>  int_data(String, film['filmID'         ]),
+            :rating             =>  int_data(String, film['rating'         ], nil, Float),
+            :rating_vote_count  =>  int_data(String, film['ratingVoteCount']),
+            :description        =>  str_data(String, film['description'    ]),
+            :profession_text    =>  str_data(String, film['professionText ']),
+            :profession_key     =>  str_data(String, film['professionKey'  ]),
+            :name_ru            =>  str_data(String, film['nameRU'         ]),
+            :name_en            =>  str_data(String, film['nameEN'         ]),
+            :year               =>  int_data(String, film['year'           ])
+          }
+        end
     end
 
     def film_ids
