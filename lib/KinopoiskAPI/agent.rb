@@ -89,7 +89,7 @@ module KinopoiskAPI
           else
             {:resultCode => -1, :message=> "Error method require", :data => { :code => response.code, :body => response.body} }
           end
-        rescue Exeption > e
+        rescue Exeption => e
           print "[Err] -> " + uri.to_s
           raise APIerror.new(0, "")
         end
