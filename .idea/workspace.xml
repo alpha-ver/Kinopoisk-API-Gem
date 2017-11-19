@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="360e7b65-650d-467e-87e9-8c29a4f0ea57" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/KinopoiskAPI/agent.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/KinopoiskAPI/api_error.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/KinopoiskAPI/category.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/KinopoiskAPI/film.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/KinopoiskAPI/film_search.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/KinopoiskAPI/gallery.rb.old" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/KinopoiskAPI/global_search.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/KinopoiskAPI/people.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/KinopoiskAPI/people_search.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/KinopoiskAPI/reviews.rb.old" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/KinopoiskAPI/similar.rb.old" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/KinopoiskAPI/today.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/KinopoiskAPI/top.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/KinopoiskAPI/version.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KinopoiskAPI.gemspec" afterPath="$PROJECT_DIR$/KinopoiskAPI.gemspec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/KinopoiskAPI.rb" afterPath="$PROJECT_DIR$/lib/KinopoiskAPI.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/KinopoiskAPI/version.rb" afterPath="$PROJECT_DIR$/lib/KinopoiskAPI/version.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,8 +40,8 @@
       <file leaf-file-name="version.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/KinopoiskAPI/version.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+            <state relative-caret-position="15">
+              <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -192,7 +177,7 @@
       <option name="presentableId" value="Default" />
       <updated>1510942365869</updated>
       <workItem from="1510942369178" duration="2974000" />
-      <workItem from="1511101731270" duration="57000" />
+      <workItem from="1511101731270" duration="199000" />
     </task>
     <servers />
   </component>
@@ -202,7 +187,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3031000" />
+    <option name="totallyTimeSpent" value="3173000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -223,7 +208,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937366" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32937366" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937366" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -284,8 +269,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/KinopoiskAPI/version.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+        <state relative-caret-position="15">
+          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
           <folding />
         </state>
       </provider>
