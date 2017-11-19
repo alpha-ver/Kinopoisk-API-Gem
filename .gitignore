@@ -1,7 +1,8 @@
 /.bundle/
 /.yardoc
 /Gemfile.lock
-/_yardoc/
+.yardoc/*
+.idea/*
 /coverage/
 /doc/
 /pkg/
