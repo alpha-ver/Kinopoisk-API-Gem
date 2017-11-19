@@ -9,16 +9,16 @@ Gem::Specification.new do |spec|
   spec.authors              = ['Alexey Vildyaev']
   spec.email                = ['hav0k@me.com']
 
-  spec.summary              = %q{Gem for operation with Kinopoisk API}
+  spec.summary              = %q{Gem for operation with Kinopoisk API.[Deleted]}
   spec.description          =
 
   <<-EOF
-    Gem is based on the mobile API.
+    Используйте https://github.com/groverz/kp_api
   EOF
 
-  spec.homepage             = 'https://github.com/alpha-ver/Kinopoisk-API-Gem'
+  spec.homepage             = 'https://github.com/groverz/kp_api'
   spec.license              = 'MIT'
-  spec.post_install_message = "Thanks for installing!"
+  spec.post_install_message = "Данный гем больше не работает!!! Используйте https://github.com/groverz/kp_api"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   # spec.bindir        = "exe"
